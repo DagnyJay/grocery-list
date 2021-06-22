@@ -6,15 +6,18 @@
 <body>
   <div class="container">
      <h2> What Do We Need at the Store? </h2>
-<form action ="/additem" method="POST">
-       <input type="text" name="newitem" placeholder="add new item">        <button> Add Item </button>
+<form action ="/addItem" method="POST">
+       <input type="text" name="newItem" placeholder="add new item">        <button> Add Item </button>
     <h2> Added Item </h2>
-        <% for( let i = 0; i < item.length; i++){ %>
-    <li><input type="checkbox" name="check" value="<%= item[i] %>" /> <%= item[i] %> </li>
+        <% for( let i = 0; i < groceryItems.length; i++){ %>
+    <li><input type="checkbox" name="check" value="<%= groceryItems[i] %>" /> <%= groceryItems[i] %> </li>
     <% } %>
-<button formaction="/removeitem" type="submit"> Remove Item </button>
+<button formaction="/removeItem" type="submit"> Remove Item </button>
 </form>
     <h2> Got it! </h2>
+        <% for(let i = 0; i <gottenItems.length; i++){ %>
+            <li><input type="checkbox" checked><%= gottenItems[i] %> </li>
+        <% } %> 
 </div>
 </body>
 </html>
