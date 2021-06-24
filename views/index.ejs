@@ -1,7 +1,7 @@
 <html>
   <head>
     <title> Grocery List App </title>
-    <link href="/styles.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
   </head>
 <body>
   <div class="container">
@@ -14,10 +14,6 @@
     <% } %>
 <button formaction="/removeItem" type="submit"> Remove Item </button>
 </form>
-    <h2> Got it! </h2>
-        <% for(let i = 0; i <gottenItems.length; i++){ %>
-            <li><input type="checkbox" checked><%= gottenItems[i] %> </li>
-        <% } %> 
 </div>
 </body>
 </html>
