@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express()
 const bodyParser = require("body-parser");
+const port = 3000
 let groceryItems = ["milk", "breadcrumbs", "a fancy fish"]
 
 app.use(express.static("public"));
@@ -17,8 +18,8 @@ app.get('/', function(req, res){
   res.render('index', {groceryItems: groceryItems});
 });
 
-app.listen(8080, function () {
-  console.log('Running on port 8080!')
+app.listen(port, function () {
+  console.log('Running on port' + port + ' !')
 });
 
 app.set('view engine', 'ejs');
